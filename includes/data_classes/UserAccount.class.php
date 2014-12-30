@@ -98,7 +98,7 @@
 		 * @return UserAccount Object
 		 */
 		// Returns true if UserAccountId/UserPin are correct and false otherwise
-		public function LoadByUserAccountIdPortableUserPin($intUserAccountId, $strPortableUserPin) {
+		public static function LoadByUserAccountIdPortableUserPin($intUserAccountId, $strPortableUserPin) {
 			
 			return UserAccount::QuerySingle(
 				QQ::AndCondition(QQ::Equal(QQN::UserAccount()->UserAccountId, $intUserAccountId), QQ::Equal(QQN::UserAccount()->PortableUserPin, $strPortableUserPin))
